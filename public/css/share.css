@@ -1,0 +1,144 @@
+.nav .nav-ul .share1{
+	background-color:#c67373;
+
+}
+.main dl {
+	height: 1650px;
+	width: 1200px;
+	margin: 0 0 0 360px;
+}
+
+.main dl img {
+	float: left;
+	margin:23px 0 0 0;
+
+
+}
+.main dl li{
+	height: 200px;
+	width: 1200px;
+	padding: 1px;
+	border-bottom: 1px solid #b3adad;
+}
+.main dl li span{
+	float: left;
+	background:url(../images/index/clock.png) no-repeat 0 2px;
+	width: 100px;
+	font-size: 12px;
+	height: 16px;
+	text-indent: 20px;
+	text-align: center;
+	line-height: 16px;
+	margin-top: 80px;
+	color: #938d8d;
+}
+.main dl li .reply1{
+	float: left;
+	background:url(../images/index/reply.png) no-repeat 0 2px;
+	width: 70px;
+	font-size: 12px;
+	height: 16px;
+	text-indent: 0px;
+	text-align: center;
+	line-height: 16px;
+	margin: 80px 0 0 600px;
+	color: #938d8d;
+}
+.main dl li i{
+	float: left;
+	background:url(../images/index/browser.png) no-repeat 0 2px;
+	width: 100px;
+	font-size: 12px;
+	height: 16px;
+	text-indent: 20px;
+	text-align: center;
+	line-height: 16px;
+	margin: 80px 0 0 10px;
+	font-style: normal;
+	color: #938d8d;
+}
+.main dl li .zanshang{
+	float: left;
+	background:url(../images/index/thumb.png) no-repeat 0 2px;
+	width: 40px;
+	font-size: 12px;
+	height: 16px;
+	text-indent: 20px;
+	text-align: center;
+	line-height: 16px;
+	margin: 80px 0 0 10px;
+	color: #938d8d;
+	
+}
+.main dl h4{
+	margin:20px 0 0 0;
+
+}
+.main dl li p{
+	margin: 20px 0 0 0;
+	font-size: 14px;
+}
+.footer{
+	margin:0 0 0 0 ;
+	height: 149px;
+	background-color: #131927;
+	padding: 1px;
+	position: relative;
+}
+.footer a {
+	
+	color: white;
+	font-size: 14px;
+
+}
+.footer .links{
+	display: block;
+	margin:40px 0 0 360px; 
+}
+.footer i{
+	display: block;
+	color: white;
+	font-size: 14px;
+	font-style: normal;
+	margin:40px 0 0 360px; 
+}
+.footer .wechat{
+	float: left;
+	width: 55px;
+	height: 25px;
+	background: url(../images/index/wechat.png) no-repeat ;
+	background-size: 25px 25px;
+	font-size: 12px;
+	text-indent:30px;
+	line-height: 25px;
+	top: 90px;
+	left: 1400px;
+	position: absolute;
+}
+.footer .webo{
+	float: left;
+	width: 55px;
+	height: 25px;
+	background: url(../images/index/webo.png) no-repeat;
+	background-size: 25px 25px;
+	font-size: 12px;
+	text-indent:30px;
+	line-height: 25px;
+	top: 90px;
+	left: 1470px;
+	position: absolute;
+}
+.main ol li{
+	color:black;
+	float: left;
+	width: 20px;
+	height: 20px;
+	color: #c87575;
+	margin-right: 5px;
+
+}
+.main ol{
+	margin: 0 0 0 900px;
+	height: 20px;
+
+}

@@ -1,0 +1,154 @@
+<style type="text/css">
+	table tr{
+		height: 40px;
+
+	}
+	table tr th{
+		border: 1px solid #ccc;
+		font-size: 14px;
+		color: black;
+		background-color: bisque;
+		font-weight: normal;
+	}
+	table{
+		width: 750px;
+		margin: 0 auto 0;
+	}
+	table tr td{
+		text-align: center;
+		border: 1px solid #ccc;
+		font-size: 12px;
+	}
+	#core #pagelist li{
+		width: 25px;
+		height: 25px;
+		line-height: 25px;
+		text-align: center;
+		margin-right: 10px;
+		background-color: white;
+		font-size: 14px;
+		
+	}
+	#core #pagelist{
+		float: left;
+		height: 28px;
+		margin-left: 10px;
+		
+		
+	}
+
+	#core #pnbtn{
+		margin: 20px 0 0 450px;	
+
+	}
+	#pnbtn #prev{
+		float: left;
+		width: 25px;
+		height: 25px;
+		border: 1px solid black;
+	}
+	#pnbtn #next{
+		float: left;
+		width: 25px;
+		height: 25px;
+		border: 1px solid black;
+	}
+	#pnbtn #jumppage{
+		float: left;
+		width: 25px;
+		height: 25px;
+		border:1px solid black;
+		outline: none;
+		margin-left: 10px;
+	}
+	#pnbtn #clickjump{
+		float: left;
+		width: 25px;
+		height: 25px;
+		border: 1px solid black;
+		font-size: 12px;
+		line-height: 25px;
+		text-align: center;
+		margin-left: 10px;
+	
+	}
+	#core #papertable i{
+		font-style: normal;
+		color: green;
+		margin: 0 5px 0 20px;
+		float: left;
+	}
+	#core #papertable tr td a{
+		float: left;
+		margin-top: 1px;
+	}
+	#core #papertable i:hover{
+		cursor: pointer;
+	}
+	#core #fixpop textarea{
+		resize: none;
+		width:400px;
+		height: 400px;
+	}
+	#core #fixpop #xxclose{
+		position: absolute;
+	}
+	#core #fixpop{
+		background-color: red;
+		width: 500px;
+		height: 500px;
+		position: relative;
+		margin: -300px 0 0 380px;
+		display: none;
+	}
+	#core #fixpop .fixtop{
+		margin:10px 0 10px 100px;
+	}
+	#core #fixpop .fixtop input{
+		outline: none;
+		height: 25px;
+		width: 200px;
+	}
+	#core #fixpop #fixedbtn{
+		border: 1px solid black;
+		color: black;
+		margin-left: 400px;
+	}
+	#core #fixpop #xxclose{
+		display: block;
+		position: absolute;
+		left: 480px;
+		top: 0;
+
+	}
+</style>
+<table cellpadding="0" cellspacing="0" id="papertable">
+	<tr>
+		<th style="width:250px" >用户Id</th>
+		<th style="width:150px">用户姓名</th>
+		<th style="width:200px">用户注册时间</th>
+		<th style="width:350px">用户密码</th>
+		<th style="width:150px">用户邮箱</th>
+		<th style="width:150px">用户管理</th>
+	</tr>
+</table>
+<div id="pnbtn">
+	<a id="prev" href="javascript:;"> << </a>
+	<ul id="pagelist">
+
+	</ul>
+	<a id="next" href="javascript:;"> >> </a>
+	<input id="jumppage" type="text" name="" >
+	<a id="clickjump" href="javascript:;">跳转</a>
+</div>
+<div id="fixpop">
+	<div class="fixtop">
+	标题:<input id="fixpoptitle" type="text" name="">
+	</div>
+	<div>
+		内容:
+		<textarea id="fixpoptext"></textarea>
+	</div>
+	<a id="fixedbtn" href="javascript:;">点击修改</a>
+	<a id="xxclose" href="javascript:;"> X </a>
+</div>

@@ -1,0 +1,139 @@
+<style type="text/css">
+	div dl li input{
+		border: none;
+		outline: none;
+		height: 30px;
+		width: 100px;
+		background:#f9f9f9;
+		line-height: 30px; 
+	}
+	.main .content #core dl li{
+		
+		width: 200px;
+		height: 40px;
+		border: 1px solid black;
+		border-radius: 4px;
+		line-height: 40px;
+		text-indent: 1rem;
+		letter-spacing: 0.5em;
+
+	}
+	.main .content #core dl .bgsex{
+		letter-spacing: 0;
+
+	}
+	.main .content #core dl #submit{
+		text-align: center;
+		line-height: 40px;
+		background-color: bisque;
+	}
+	.main .content #core dl #userGender{
+		display: inline-block;
+		height: 15px;
+		width: 15px;
+	}
+	.main .content #core dl #userGender1{
+		display: inline-block;
+		height: 15px;
+		width: 15px;
+	}
+	 dl{
+	 	width: 200px;
+		margin: 0 auto 0;
+	}
+	a{
+		display: block;
+		width: 100px;
+		height: 20px;
+		text-align: center;
+		line-height: 20px;
+		background-color: bisque;
+		font-size: 12px;
+		color: #c3c3c3;
+		border-radius: 5px;
+		margin:  0 0 0 35px;
+		margin: 0 auto 0;
+	}
+	#btn1{
+		clear: both;
+	}
+
+	#popup .cover{
+		position: absolute;
+		height: 80px;
+		width: 80px;
+		border: 45px solid rgba(192,192,192,0.5);
+		text-align: center;
+		line-height: 80px;
+		font-size: 50px;
+	}
+	#popup .cover img{
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	#core #popup{
+		position: absolute;
+		width: 170px;
+		height: 170px;
+		overflow: hidden;
+		left: 50%;
+		margin-left: -85px;
+		display: none;
+	}
+	#core .headpic{
+		height: 150px;
+		width: 150px;
+		
+		border-radius: 10px;
+		overflow: hidden;
+		margin: 0 auto 0;
+	}
+	#core .headpic img{
+		width: 100%;
+		height: 100%;
+	}
+	#xxx{
+		position: absolute;
+		color: red;
+		display: none;
+		left: 1025px;
+		top: 170px;
+		width: 20px;
+		height: 20px;
+		text-align: center;
+		line-height: 20px;
+
+
+
+
+	}
+	
+</style>
+
+
+<div id="popup">
+	<div class="cover">
+		+
+			
+	</div>
+	<img id="" src="">
+	
+	<input type="file" name="" id="file" value="选择文件" style="display: none;">
+</div>
+<a id="xxx" href="javascript:;" > X </a>
+<div class="headpic" id="headpic">
+	<img id="headpic1" src="123.png">
+</div>
+<a href="javascript:;">点击修改</a>
+<div>
+	<dl>
+
+		<li>昵称:<input id="usernickname" type="text" name="" placeholder="请输入昵称"></li>
+		<li>密码:<input id="userPwd" type="text" name="" placeholder="请输入密码"></li>
+		<li class="bgsex">男性：<input id="userGender" type="radio" name="gender" value="男">
+		女性：<input id="userGender1" type="radio" name="gender" value="女"></li>
+		<li>年龄:<input id="userAge" type="text" name="" placeholder="请输入年龄"></li>
+		<li id="submit">提交</li>
+	</dl>
+</div>

@@ -1,0 +1,173 @@
+.main .nav .nav-ul .li5{
+	background:#c87575;
+}
+.main .writing .kuang{
+	float: left;
+	margin: 50px 0 0 360px;
+}
+.main .writing {
+	height: 372px;
+
+}
+.main .writing .login{
+	display: block;
+	position: absolute;
+	left: 403px;
+	top: 151px;
+	color: #c87575;
+	font-weight: bold;
+
+}
+.main .writing textarea{
+	display: block;
+	outline: none;
+	position: absolute;
+	top: 220px;
+	left: 400px;
+	border: none;
+	color: #c4bdbd;
+	resize: none;
+	width: 600px;
+	height: 200px;
+}
+.main .writing i{
+	float: left;
+	width: 300px;
+	height: 278px;
+	border-radius: 35px;
+	border: 3px solid  #c87575; 
+	margin:90px 0 0 90px;
+	text-align: center;
+	line-height: 268px;
+	font-size: 18px;
+}
+.main .picture1{
+	margin:20px 0 0 360px;
+	height: 30px;
+}
+.main .picture1 li{
+	float: left;
+	margin-left: 40px;
+}
+.main .picture1 .li3{
+	margin-left:550px;
+}
+.main .pinlun{
+	height: 60px;
+	margin: 40px 0 0 360px;
+}
+.main .pinlun .p-left{
+	float: left;
+	width: 80px;
+	height: 40px;
+	border: 2px solid #c87575;
+	border-radius: 15px 15px 0 0;
+	border-bottom: none;
+	line-height: 40px;
+	text-align: center;
+	color:#c87575; 
+}
+.main .pinlun .p-right{
+	float: left;
+	height: 40px;
+	text-align: right;
+	width: 1118px;
+	border-bottom:  2px solid #c87575;
+	line-height: 40px;
+	color: #c87575;
+} 
+.main .pinlun .p-right span{
+	font-size: 18px;
+	font-weight: bold;
+	color: #c87575;
+}
+.main .latest{
+	height: 40px;
+	margin: 0 0 0 385px;
+}
+.main .latest strong{
+	float: left;
+	width: 10px;
+	height: 30px;
+	background-color: #c87575;
+	border-radius: 15px;
+}
+.main .latest p{
+	float: left;
+	color: #c87575;
+	margin:5px 0 0 10px;
+	font-weight: bold;
+	font-size: 14px;
+
+
+}
+.main .comment .icon1{
+	float: left;
+	margin-top: 10px;
+}
+.main .comment {
+	position: relative;
+	padding:1px;
+	height: 123px;
+	width: 1180px;
+	margin: 10px 0 0 385px;
+	border-bottom: 1px dashed #c87575;
+
+}
+.main .comment ul li{
+	float: left;
+	font-size: 12px;
+	margin-left: 20px;
+	color: #bbb7b7;
+	height: 16px;
+	line-height: 16px;
+	text-align: center;
+}
+.main .comment span{
+	float: left;
+	color: #d22828;
+	font-size: 14px;
+	margin:20px 0 0 40px;
+}
+.main .comment i{
+	float: left;
+	font-style: normal;
+	color: #b0abab;
+	font-size: 14px;
+	margin:20px 0 0 10px;
+}
+.main .comment strong{
+	float:right;
+	font-weight: normal;
+	font-size: 12px;
+	color:  #b0abab;
+	margin-right: 20px;
+}
+.main .comment div{
+	height: 20px;
+	
+
+}
+.main .comment p{
+	float: left;
+	margin: 20px 0 0 40px;
+	font-size: 14px;
+	height: 58px;
+	width: 842px;
+	
+
+}
+.main .comment ul{
+	clear: both;
+	position: absolute;
+	top: 100px;
+	margin-left:970px;
+
+
+}
+.main .comment ul li img{
+	display: inline-block;
+	margin:0 5px 0 0;
+	position: relative;
+	top: 1px;
+}

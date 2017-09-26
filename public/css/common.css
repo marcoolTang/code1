@@ -1,0 +1,296 @@
+*{
+	margin:0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+
+
+.main{
+		width: 1920px;
+		height: 1363px;
+		position: relative;
+}
+.main .Top{
+	height: 50px;
+	
+	background:url(../images/index/logo.png) no-repeat 360px 0 #493d36;
+}
+.rl a{
+	color: white;
+	font-size: 14px;
+}
+.rl{
+	height: 14px;
+	float: right;
+	margin:14px 360px 0 0;
+}
+.nav{
+	height: 36px;
+}
+.nav .nav-ul{
+	float: left;
+	width: 1200px;
+	height: 36px;
+	margin: 0 0 0 360px;
+	border-bottom: 1px solid black;
+}
+@font-face{
+	font-family:myFirstFont;
+	src:url('512.ttf');
+}
+.nav .nav-ul li{
+	float: left;
+	height: 36px;
+	width: 80px;
+	background:rgba(10,0,0,0.4);
+	color:#f9f3f3;
+	text-align: center;
+	line-height: 36px;
+	margin-right: 5px;
+	font-family:myFirstFont;
+
+}
+
+.nav .nav-ul .li3{
+	width: 100px;
+}
+.nav input{
+	position: absolute;
+	width: 220px;
+	height: 27px;
+	border: 1px solid black;
+	border-radius: 5px;
+	top:53px;
+	left: 1340px;
+	background: url(../images/index/search.png) no-repeat 195px 4px;
+	text-indent:10px;
+		
+}
+ #cover{
+	width: 100%;
+	height:100%;
+	position: absolute;
+	background-color: black;
+	opacity: 0.5;
+	z-index: 10;
+	display: none;
+
+}
+.footer{
+	margin:20px 0 0 0 ;
+	height: 149px;
+	background-color: #131927;
+	padding: 1px;
+	position: relative;
+}
+.footer a {
+	
+	color: white;
+	font-size: 14px;
+
+}
+.footer .links{
+	display: block;
+	margin:40px 0 0 360px; 
+}
+.footer i{
+	display: block;
+	color: white;
+	font-size: 14px;
+	font-style: normal;
+	margin:40px 0 0 360px; 
+}
+.footer .wechat{
+	float: left;
+	width: 55px;
+	height: 25px;
+	background: url(../images/index/wechat.png) no-repeat ;
+	background-size: 25px 25px;
+	font-size: 12px;
+	text-indent:30px;
+	line-height: 25px;
+	top: 90px;
+	left: 1400px;
+	position: absolute;
+}
+.footer .webo{
+	float: left;
+	width: 55px;
+	height: 25px;
+	background: url(../images/index/webo.png) no-repeat;
+	background-size: 25px 25px;
+	font-size: 12px;
+	text-indent:30px;
+	line-height: 25px;
+	top: 90px;
+	left: 1470px;
+	position: absolute;
+}
+#reglog{
+	width: 320px;
+	height: 288px;
+	border-radius: 10px;
+	background-color: white;
+	position:absolute;
+	z-index: 20;
+	display: none;
+
+
+
+	
+	left: 50%;
+	margin:350px 0 0 -160px;
+
+}
+#reglog div{
+	width: 104px;
+	left: 50%;
+	margin: 30px 0 0 -52px;
+	position: absolute;
+}
+
+#reglog dl li{
+	width: 220px;
+	height: 30px;
+	border: 1px solid #dfdbdb;
+	margin-bottom: 15px;
+}
+#reglog dl{
+	position: absolute;
+	margin:70px 0 0 50px;
+	display: block;
+}
+#reglog dl li input{
+	border:none;
+	outline: none;
+	font-size: 12px;
+	text-indent: 5px;
+	height: 30px;
+	text-align: 30px;
+}
+#reglog dl li span {
+	float: left;
+	width: 30px;
+	height: 30px;
+	background-color: #f0eded;
+	border-right: 1px solid #dfdbdb;
+	text-align: center;
+	line-height: 33px;
+}
+#reglog dl li span img{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+}
+#reglog #dli3{
+	width: 220px;
+	height: 35px;
+	background-color: #c87575;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 35px;
+	color: white;
+
+}
+#dli3:hover{
+	cursor: pointer;
+}
+#reglog ul li{
+	font-size: 14px;
+	color: #aeabab;
+	float: left;
+	margin-right: 20px;
+
+}
+#reglog ul li img{
+	
+	width: 20px;
+	height: 20px;
+}
+#reglog ul{
+	position: absolute;
+	display:block;
+	margin:210px 0 0 50px;
+	
+}
+#close{
+	position: absolute;
+	top: 5px;
+	left: 300px;
+	color: black;
+}
+#reglog ol li{
+	width: 220px;
+	height: 30px;
+	border: 1px solid #dfdbdb;
+	margin-bottom: 10px;
+}
+#reglog ol{
+	position: absolute;
+	margin:70px 0 0 50px;
+	top: 0;
+	left: 0;
+}
+#preregis{
+	position: absolute;
+	left: 50%;
+	width: 220px;
+	margin: 65px 0 0 -110px;
+	display: none;
+
+	
+	
+	
+}
+#reglog ol li input{
+	border:none;
+	outline: none;
+	font-size: 12px;
+	text-indent: 5px;
+	height: 30px;
+	text-align: 30px;
+}
+#reglog ol li span {
+	float: left;
+	width: 30px;
+	height: 30px;
+	background-color: #f0eded;
+	border-right: 1px solid #dfdbdb;
+	text-align: center;
+	line-height: 33px;
+}
+#reglog ol li span img{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+}
+#reglog #oli4{
+	width: 220px;
+	height: 35px;
+	background-color: #c87575;
+	border-radius: 5px;
+	text-align: center;
+	line-height:35px;
+	color: white;
+
+}
+#oli4:hover{
+	cursor: pointer;
+}
+#log_in{
+	float: left;
+	font-size: 18px;
+	font-weight: bold;
+}
+#regist{
+	float: left;
+	font-weight:bold;
+	font-size: 18px;
+	margin-left: 20px;
+
+}

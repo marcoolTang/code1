@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Manage</title>
+	<link rel="stylesheet" type="text/css" href="../css/manage/Manage.css">
+	
+</head>
+<body>
+	<div class="main">
+		<div class="top">
+			<ul id="nav_top">
+				<li index="0" connect = "M_mainpage">首页</li>
+				<li index="1">浏览权限</li>
+				<li index="2">用户管理</li>
+				<li index="3">添加文章</li>
+				<li index="4">文章管理</li>
+				<li index="5" class="uli5">评论管理</li>
+			</ul>
+		</div>
+		<div class="content">
+		
+			<div id="core">
+			
+				<ul>
+					<li>用户ID</li>
+					<li>权限名称</li>
+					<li>权限所在模块</li>
+					<li>权限操作</li>
+					<li>充值管理</li>
+					<li>权限拥有</li>
+					
+				</ul>
+
+			</div>
+				
+			</div>
+		</div>
+	</div>
+		
+	<script type="text/javascript">
+		var nav_top = document.getElementById('nav_top')
+		var core = document.getElementById('core')
+		var list_li = nav_top.getElementsByTagName('li')
+		var a = document.createElement("script")
+		var num = null;
+		connect(list_li[0].getAttribute("connect"))
+		nav_top.onclick = function(e){
+			for(i = 0; i<list_li.length;i++){
+				if(list_li[i] == e.target){
+					list_li[i].style.color = "aqua"
+				}
+				else{
+					list_li[i].style.color =""
+				}
+			}
+			var target = e.target
+			connect(target.getAttribute("connect"))
+		
+		}
+		function connect(uri){
+		var muri =  uri + ".html"
+		console.log(muri)
+		var xhr = new XMLHttpRequest()
+		xhr.open("GET",muri)
+		xhr.setRequestHeader("Content-Type","text/html")
+		xhr.send(null)
+		xhr.onreadystatechange = function(){
+		if (xhr.readyState == 4&&xhr.status == 200) {
+			core.innerHTML = xhr.responseText
+			}
+		}
+		a.type = "text/javascript";
+		a.src = "admin_js/" + uri + ".js"
+		document.body.appendChild(a)
+		}
+		
+
+				
+					
+					
+		
+		
+	</script>
+</body>
+</html>

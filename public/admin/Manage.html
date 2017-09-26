@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Manage</title>
+	<link rel="stylesheet" type="text/css" href="../css/manage/Manage.css">
+	
+</head>
+<body>
+	<div class="main">
+		<div class="top">
+			<ul id="nav_top">
+				<li index="0" pagename = "M_mainpage">首页</li>
+				<li index="1" pagename = "M_PI"> 个人信息</li>
+				<li index="2" pagename = "M_usermanage">用户管理</li>
+				<li index="3" pagename = "M_addpaper">添加文章</li>
+				<li index="4" pagename = "M_paperM">文章管理</li>
+				<li index="5" pagename = "M_comment">评论管理</li>
+			</ul>
+		</div>
+		<div class="content">
+		
+			<div id="core">
+			
+				<ul>
+					<li>用户ID</li>
+					<li>权限名称</li>
+					<li>权限所在模块</li>
+					<li>权限操作</li>
+					<li>充值管理</li>
+					<li>权限拥有</li>
+					
+				</ul>
+
+			</div>
+				
+			</div>
+		</div>
+	</div>
+		
+<script type="text/javascript">
+	var nav_top = document.getElementById('nav_top')
+	var core = document.getElementById('core')
+	var list_li = nav_top.getElementsByTagName('li')
+	var tzz_name,tzz_gender,tzz_age,tzz_pwd,tzz_gender1
+	var num = 0;
+	var tzz_author,tzz_title,tzz_ptime,tzz_id
+	var articlepage = 1;
+	var papertable = document.getElementById('papertable');
+	list_li[0].style.color = "aqua"
+	nav_top.onclick = function(e){
+		var target = e.target
+		if(target.nodeName == "LI"){
+			var pagename = target.getAttribute('pagename');
+			jumpJudge(pagename)
+			list_li[num].style.color = '';
+			target.style.color = 'aqua';
+			num = target.getAttribute('index')
+		}
+	}
+			
+	function jumpJudge(attr){
+				switch(attr){
+					case 'M_mainpage':
+						ajaxJump('ajax/M_mainpage.html','js/M_mainpage.js');
+						break;
+					case 'M_PI':
+						ajaxJump('ajax/M_PI.html','js/M_PI.js');
+						break;
+					case 'M_usermanage':
+						ajaxJump('ajax/M_usermanage.html','js/M_usermanage.js');
+						break;
+					case 'M_addpaper':
+						ajaxJump('ajax/M_addpaper.html','js/M_addpaper.js');
+						break;
+					case 'M_paperM':
+						ajaxJump('ajax/M_paperManage.html','js/M_paperManage.js');
+						break;
+					case 'M_comment':
+					ajaxJump("ajax/M_comment.html",'js/M_comment.js')
+						break;
+
+				}
+		}
+	function ajaxJump(uri,urijs){
+				var xhr = new XMLHttpRequest();
+				xhr.open('GET',uri);
+				xhr.setRequestHeader('Content-type','text/html');
+				xhr.send(null);
+				xhr.onreadystatechange = function(){
+					if(xhr.readyState === 4 && xhr.status === 200){
+						var message = xhr.responseText;
+						var myScript = document.createElement('script');
+						myScript.type = 'text/javascript';
+						myScript.src = urijs;
+						core.innerHTML = message;
+						core.appendChild(myScript);
+					}
+				}
+			}
+	function look(){
+	var xhr = new XMLHttpRequest();
+	var str1 = window.location.search;
+	var arr = str1.split("=")
+	xhr.open('POST','/findIdAdmin');
+	xhr.setRequestHeader('Content-type','application/json');
+	xhr.send(JSON.stringify({'id':arr[1]}));
+	xhr.onreadystatechange = function(){
+		
+
+		if(xhr.readyState === 4 && xhr.status === 200){
+			var message = JSON.parse(xhr.responseText);
+			console.log(message,message.adminUserName)
+			tzz_name =  message.adminUserName;
+			tzz_pwd = message.adminUserPwd;
+			tzz_age = message.adminUserAge;
+			if(message.adminUserGender == "true"){
+				tzz_gender = true
+				tzz_gender1=  false
+			}
+			else{
+				tzz_gender1 = true
+				tzz_gender = false
+			}
+			
+			//headpic1.src = '../' + message.adminUserImg;
+		}
+	}
+}
+look();
+
+function viewallpaper(num){
+	var strpaper = "";
+	//papertable.innerHTML = '<tr><th style="width:250px" >文章标题</th><th style="width:150px">作者</th><th style="width:200px">文章发布时间</th><th style="width:350px">文章序号</th><th style="width:150px">文章管理</th></tr>'
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST','/findallpaper');
+	xhr.setRequestHeader('Content-type','application/json');
+	xhr.send(JSON.stringify({num:num}));
+	xhr.onreadystatechange = function(){
+		if(xhr.readyState === 4 && xhr.status === 200){
+			var message = JSON.parse(xhr.responseText).msg;
+			for(i = 0; i< message.length; i++){
+				strpaper +=	'<tr><td>' + message[i].adminTitle + '</td>' + '<td>' + message[i].adminAuthor +'</td>' + '<td>' + 
+				message[i].PublishTime.split('T')[0] + '</td>' + '<td>' + message[i]._id + '</td>' + '<td><i>修改 |</i><a href ="javascript:;">删除</a></td></tr>' 
+			}
+			papertable.innerHTML = 	'<tr><th style="width:250px" >文章标题</th><th style="width:150px">作者</th><th style="width:200px">文章发布时间</th><th style="width:350px">文章序号</th><th style="width:150px">文章管理</th></tr>' + strpaper
+			
+		}
+	}
+}
+
+var totalnum= null;
+var pagestr1 = '';
+function countallpapers(){
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST','/viewallpaper');
+	//xhr.setRequestHeader('Content-type','application/json')发送请求头;
+	xhr.send(null);
+	xhr.onreadystatechange = function(){
+		if(xhr.readyState === 4 && xhr.status === 200){
+			var message = JSON.parse(xhr.responseText);
+			totalnum = message.num
+			console.log(totalnum)
+		}
+		
+	}
+	
+}
+countallpapers();
+
+
+
+					
+					
+		
+		
+	</script>
+</body>
+</html>

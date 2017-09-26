@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>index</title>
+	<style type="text/css">
+		input{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<input id="userId" type="text" name="" placeholder="请输入账号">
+	<input id="userPwd" type="password" name="" placeholder="请输入密码">
+	<input id="userName" type=text"" name="" placeholder="请输入姓名">
+	<div id="userGender">
+		男<input type="radio" name="sex">
+		女 <input type="radio" name="sex">
+	</div>
+	<input id="userAge" type="text" name="" placeholder="请输入年龄">
+	<input id="submit" type="button" name="" value="提交">
+	<script type="text/javascript">
+		var userId = document.getElementById('userId')
+		var userPwd = document.getElementById('userPwd')
+		var userName = document.getElementById('userName')
+		var userGender = document.getElementById('userGender')
+		var userAge = document.getElementById('userAge')
+		var submit = document.getElementById('submit')
+		var listsex = userGender.getElementsByTagName('input')
+		var userG = null;
+		
+		var Json = {}
+		submit.onclick = function(){
+
+		for(var i = 0;i<listsex.length;i++){
+
+			console.log(listsex[i].checked)
+			if(listsex[i].checked){
+				if(i == 0){
+					userG = true
+				}
+				else{
+					userG = false
+				}
+				
+			}
+				
+		}
+			 Json = {
+				userId:userId.value,
+				userPwd:userPwd.value,
+				userName: userName.value,
+				userAge: userAge.value,
+				userGender:userG
+
+				
+
+			}
+			console.log(Json) 
+			var xhr = new XMLHttpRequest();
+			xhr.open("POST","/adminreg")
+		 	xhr.setRequestHeader('Content-Type','application/json');
+		 	xhr.send(JSON.stringify(Json))
+		 	xhr.onreadystatechange = function(){
+		 		if(xhr.readyState === 4 && xhr.status === 200){
+		 			var arrJ = JSON.parse((xhr.responseText))
+		 				if(arrJ.code == 102){
+		 					alert("注册成功")
+		 					window.location ="login.html"
+		 				}
+		 				if(arrJ.code == 100){
+		 					alert("用户重复")
+		 				}
+		 				if(arrJ.code == 101){
+		 					alert("其他错误")
+		 				}
+		 				
+		 		}
+		 	}
+		}
+		
+		
+	</script>
+
+</body>
+</html>
